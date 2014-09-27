@@ -27,7 +27,8 @@
  *   -v, --version  Display version information and exit
  */
 
-#define _SVID_SOURCE  /* rpmatch(3) is exposed through the SysV Interface Definition */
+#define _SVID_SOURCE     /* rpmatch(3) is exposed through the SysV Interface Definition */
+#define _DEFAULT_SOURCE  /* _SVID_SOURCE is replaced by _DEFAULT_SOURCE since glibc 2.19 */
 
 #include <getopt.h>   /* getopt_long(3) */
 #include <locale.h>   /* setlocale(3)   */
