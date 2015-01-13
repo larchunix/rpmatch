@@ -5,6 +5,7 @@ AC_PREREQ([2.63])
 AC_INIT([rpmatch], [1.0.0-rc1], [bug-report@address])
 AC_CONFIG_SRCDIR([src/rpmatch.c])
 AC_CONFIG_HEADERS([src/config.h])
+AC_CONFIG_AUX_DIR([build-aux])
 
 # Checks for programs.
 AC_PROG_CC
@@ -21,5 +22,11 @@ AC_CHECK_HEADERS([getopt.h locale.h stdio.h stdlib.h string.h],
 
 # Checks for library functions.
 AC_CHECK_FUNCS([getopt_long rpmatch setlocale])
+
+# Automake integration
+AM_INIT_AUTOMAKE([foreign dist-xz no-dist-gzip -Wall])
+AM_SILENT_RULES([yes])
+
+AC_CONFIG_FILES([Makefile src/Makefile])
 
 AC_OUTPUT
