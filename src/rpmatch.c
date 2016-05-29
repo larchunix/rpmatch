@@ -27,6 +27,10 @@
  *   -v, --version  Display version information and exit
  */
 
+#ifdef HAVE_CONFIG_H
+#  include "config.h"  /* PACKAGE_STRING */
+#endif /* HAVE_CONFIG_H */
+
 #define _SVID_SOURCE     /* rpmatch(3) is exposed through the SysV Interface Definition */
 #define _DEFAULT_SOURCE  /* _SVID_SOURCE is replaced by _DEFAULT_SOURCE since glibc 2.19 */
 
